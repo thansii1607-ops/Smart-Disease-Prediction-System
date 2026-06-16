@@ -34,6 +34,9 @@ The project uses a disease symptom and patient profile dataset containing:
 5. Model Training
 6. Disease Prediction
 7. Result Visualization
+# Screenshots
+<img width="1143" height="895" alt="image" src="https://github.com/user-attachments/assets/2f4d4c0a-4703-4c05-b9be-06b69f8ca1ac" />
+
 
 ## Installation
 
