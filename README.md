@@ -34,8 +34,18 @@ The project uses a disease symptom and patient profile dataset containing:
 5. Model Training
 6. Disease Prediction
 7. Result Visualization
-# Screenshots
-<img width="1143" height="895" alt="image" src="https://github.com/user-attachments/assets/2f4d4c0a-4703-4c05-b9be-06b69f8ca1ac" />
+
+##screenshot
+<img width="1361" height="648" alt="WhatsApp Image 2026-06-17 at 8 54 15 PM" src="https://github.com/user-attachments/assets/cab9d2b3-ccf0-41be-a42c-c9ce7f4168e1" />
+Figure 1: User Login Interface of Smart Disease Prediction System
+
+<img width="1600" height="782" alt="WhatsApp Image 2026-06-17 at 8 56 18 PM" src="https://github.com/user-attachments/assets/74e3a25f-3e12-4ed9-a4b5-b693fc5a7882" />
+Figure 2: Disease Prediction Dashboard and Result Display
+
+##conclusion
+The Smart Disease Prediction System helps users predict diseases based on symptoms through an easy-to-use interface. The project was successfully implemented using Python and Streamlit and demonstrates the application of technology in healthcare.
+
+
 
 
 
