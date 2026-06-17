@@ -1,21 +1,61 @@
 import streamlit as st
-import streamlit as st
+import json
+import os
 
-# ===== LOGIN CODE =====
-if "logged_in" not in st.session_state:
-    st.session_state.logged_in = False
+USER_FILE = "users.json"
 
-def login():
-    if username == "admin" and password == "1234":
-        st.session_state.logged_in = True
-    else:
-        st.error("Invalid Credentials")
+# users file create
+if not os.path.exists(USER_FILE):
+    with open(USER_FILE, "w") as f:
+        json.dump({}, f)
 
-if not st.session_state.logged_in:
-    st.title("🔐 Login")
+def load_users():
+    with open(USER_FILE, "r") as f:
+        return json.load(f)
+
+def save_users(users):
+    with open(USER_FILE, "w") as f:
+        json.dump(users, f)
+
+st.title("🔐 Smart Disease Prediction System")
+
+menu = st.sidebar.selectbox(
+    "Menu",
+    ["Login", "Register"]
+)
+
+if menu == "Register":
+    st.subheader("Create Account")
+
+    new_user = st.text_input("Username")
+    new_pass = st.text_input("Password", type="password")
+
+    if st.button("Register"):
+        users = load_users()
+
+        if new_user in users:
+            st.error("Username already exists")
+        else:
+            users[new_user] = new_pass
+            save_users(users)
+            st.success("Registration Successful")
+
+elif menu == "Login":
+    st.subheader("Login")
+
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
-    st.button("Login", on_click=login)
+
+    if st.button("Login"):
+        users = load_users()
+
+        if username in users and users[username] == password:
+            st.success(f"Welcome {username} 🎉")
+
+            st.header("🩺 Disease Prediction System")
+            st.write("Login successful.")
+        else:
+            st.error("Invalid Username or Password")
 
 # ===== MAIN WEBSITE =====
 else:
