@@ -15,7 +15,7 @@ The Smart Disease Prediction System is a Machine Learning-based application that
 ## Technologies Used
 
 * Python
-* Pandas
+* CSV Dataset
 * NumPy
 * Matplotlib
 * Scikit-learn
