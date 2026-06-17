@@ -38,9 +38,4 @@ The project uses a disease symptom and patient profile dataset containing:
 <img width="1143" height="895" alt="image" src="https://github.com/user-attachments/assets/2f4d4c0a-4703-4c05-b9be-06b69f8ca1ac" />
 
 
-## Installation
 
-Clone the repository:
-
-```bash
-git clone https://github.com/thansii1607-ops/Smart-Disease-Prediction-System.git
